@@ -1,67 +1,3 @@
-"""
-Devolve as listas em linhas diferentes
-a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
-for row in a:
-    for elem in row:
-        print(elem, end=' ')
-    print()"""
-
-"""    
-Devolvem a soma dos nums dentro da lista de listas
-a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
-s = 0
-for i in range(len(a)):
-    for j in range(len(a[i])):
-        s += a[i][j]
-print(s)
-
-a = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
-s = 0
-for row in a:
-    for elem in row:
-        s += elem
-print(s)
-"""
-
-"""
-
-"""
-"""
-n = int(input()) 
-a = []
-for i in range(n):
-    a.append([int(j) for j in input().split()])
-print(a)"""
-
-"""
-Print elements in a diagonal
-n = 4
-a = [[0] * n for i in range(n)]
-for i in range(n):
-    for j in range(n):
-        if i < j:
-            a[i][j] = 0
-        elif i > j:
-            a[i][j] = 2
-        else:
-            a[i][j] = 1
-for row in a:
-    print(' '.join([str(elem) for elem in row]))
-
-
-n = 4
-a = [0] * n
-for i in range(n):
-    a[i] = [2] * i + [1] + [0] * (n - i - 1)
-for row in a:
-    print(' '.join([str(elem) for elem in row]))
-
-n = 4
-a = [0] * n
-a = [[2] * i + [1] + [0] * (n - i - 1) for i in range(n)]
-for row in a:
-    print(' '.join([str(elem) for elem in row]))    
-"""
 #1 Problem maximum
 def max():
     o = input().split(' ')
@@ -81,6 +17,7 @@ def max():
                 row = i
                 col = j
     return row, col
+    
 """
 Model 
 n, m = [int(i) for i in input().split()]
@@ -96,7 +33,7 @@ print(best_i, best_j)
 """
 
 #2 Snowflake
-"""n = int(input())
+n = int(input())
 l = [['.'] * n for i in range(n)]
 for  i in range(len(l)):
     l[i][i] = '*'
@@ -104,10 +41,10 @@ for  i in range(len(l)):
     l[i][n//2] = '*'
     l[i][n-i-1] = '*'
 for row in l:
-    print(' '.join(row))"""
+    print(' '.join(row))
 
 #3 Chess board
-"""
+
 n,m = [int(i) for i in input().split()]
 a = []
 for i in range(n):
@@ -119,16 +56,16 @@ for i in range(n):
             a[i].append('*')
 for row in a:
     print(' '.join(row))
-"""
+
 #4 Diagonal parallel to the main
-"""n = int(input())
+n = int(input())
 a = []
 for i in range(n):
     a.append([])
     for j in range(n):
         a[i].append(abs(i-j))
 for row in a:
-    print(' '.join([str(i) for i in row]))"""
+    print(' '.join([str(i) for i in row]))
 """
 Model
 n = int(input())
@@ -139,7 +76,7 @@ for row in a:
 
 #5 side diagonal
 
-"""n = int(input())
+n = int(input())
 a = [[0]*n for i in range(n)]
 for i in range(len(a)):
     for j in range(len(a[i])):
@@ -150,13 +87,13 @@ for i in range(len(a)):
         if j < n and j > n-i:
             a[i][j] = 2
 for row in a:
-    print(' '.join(str(i) for i in row))"""
+    print(' '.join(str(i) for i in row))
 
 #6 Swap the columns
 def swap_columns(a,i,j):
     for k in range(len(a)):
         a[k][i], a[k][j] = a[k][j], a[k][i] #troca de coluna
-"""n,m = [int(i) for i in input().split(' ')]
+n,m = [int(i) for i in input().split(' ')]
 a = []
 for i in range(n):
     l = input().split(' ')
@@ -164,10 +101,10 @@ for i in range(n):
 s1, s2 = [int(i) for i in input().split(' ')]
 swap_columns(a,s1,s2) 
 for row in a:
-    print(' '.join(str(i) for i in row))"""
+    print(' '.join(str(i) for i in row))
 
 #7 Scale a matrix
-"""n,m = [int(i) for i in input().split(' ')]
+n,m = [int(i) for i in input().split(' ')]
 a = []
 for i in range(n):
     l = input().split(' ')
@@ -177,7 +114,7 @@ for i in range (len(a)):
     for j in range(len(a[i])):
         a[i][j] = int(a[i][j])*s
 for row in a: 
-    print(' '.join(str(i) for i in row))"""
+    print(' '.join(str(i) for i in row))
 
 #8 Multiply two matrices
 m,n,r = [int(i) for i in input().split()]
